@@ -1,3 +1,5 @@
+Live Url :: https://tejs910.github.io/getcv/
+
 This project is inspired by https://codecanyon.net/item/resumen-multistep-resume-builder/28990151
 
 I just used their css and html, So i can focus in react more. Here i used Konva Library, JsPDF.
