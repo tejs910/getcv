@@ -1,0 +1,696 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Poppins";
+  box-sizing: border-box;
+  /* 1rem is 10px */
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  min-height: 100%;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+__next {
+  height: 100%;
+  min-height: 100%;
+}
+
+// left side form all styles
+.actions {
+  overflow: hidden;
+  flex: 1 1;
+  height: 100%;
+}
+.filling {
+  padding: 3.6rem;
+  &.actionIntroWrapper {
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+  }
+}
+.actionIntroWrapper {
+  .formHead {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cvTitle {
+    span {
+      font-size: 3.2rem;
+    }
+  }
+  .progressLabel {
+    .title,
+    .value {
+      font-size: 1.2rem;
+    }
+    .value {
+      color: rgb(230, 126, 34);
+    }
+  }
+  form {
+    margin-top: 2rem;
+    .additionalDetailsToggle {
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem 0;
+      span {
+        color: #0042c6;
+        vertical-align: middle;
+      }
+      img {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+    }
+  }
+  .sectionHeading {
+    margin: 0.7rem 0;
+    .sectionTitle {
+      font-weight: 600;
+      font-size: 2.2rem;
+    }
+    .sectionDescription {
+      color: #98a1b3;
+      font-size: 1.4rem;
+    }
+  }
+  .componentsWrapper {
+    margin-bottom: 4rem;
+  }
+}
+.progressWrapper {
+  width: 100%;
+  .progreessPath {
+    margin-top: 1rem;
+    background-color: #f2f5fa;
+    height: 0.4rem;
+    width: 100%;
+    border-radius: 1.5rem;
+  }
+  .progressFill {
+    background-color: red;
+    height: 0.4rem;
+    border-radius: 1.5rem;
+    transition: all 1s ease-in-out;
+    width: 60%;
+    background: rgb(230, 126, 34);
+  }
+}
+
+.grid2col {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+.simpleInput {
+  display: flex;
+  flex-direction: column;
+  .inputTitle {
+    margin: 0.5rem 0;
+    color: #98a1b3;
+    font-size: 1.5rem;
+  }
+  input,
+  select {
+    font-family: "Poppins";
+    background-color: #f8fafe;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 4.5rem;
+    font-size: 1.5rem;
+    &:focus {
+      outline-width: 0;
+      & ~ .border {
+        width: 99% !important;
+        display: inline;
+        display: initial;
+        opacity: 1;
+      }
+    }
+  }
+  .border {
+    opacity: 0;
+    width: 0;
+    height: 1px;
+    border: 1px solid transparent;
+    background-color: #694aff;
+    transition: all 0.3s ease-in-out;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+  }
+}
+
+.imageInputUpload {
+  display: flex;
+  flex-direction: column;
+  .imageInputTitle {
+    margin: 0.5rem 0;
+    color: #98a1b3;
+    font-size: 1.5rem;
+  }
+}
+
+.fileUploader {
+  width: 100%;
+}
+
+.simpleTextArea {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  .inputTitle {
+    margin: 5px 0;
+    color: #98a1b3;
+    font-size: 15px;
+  }
+  textarea {
+    background-color: #f8fafe;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 100px;
+
+    &:focus {
+      outline-width: 0;
+      /* prettier-ignore */
+      & ~ .border {
+        width: 100% !important;
+        display: inline;
+        display: initial;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.checkBoxInput {
+  display: flex;
+  .inputTitle {
+    margin: 0.5rem 0;
+    color: #98a1b3;
+    font-size: 1.5rem;
+    padding: 40px 20px;
+  }
+  .checkbox {
+    margin-right: 15px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// for the canvas
+.right-panel {
+  overflow: hidden;
+  flex: 1 1;
+  height: 100%;
+}
+
+.introWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Resume {
+  width: 470px;
+  border-radius: 11px;
+  margin: 20px 0;
+  // margin: auto;
+  background-color: #fff;
+}
+
+.toast {
+  background-color: #fff;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.board {
+  background-color: #cbcbe0;
+  min-height: 100%;
+  height: 100%;
+  min-width: 50%;
+  justify-content: flex-start;
+  font-family: "Poppins";
+  overflow: hidden;
+  overflow-y: scroll;
+  color: #fff;
+  top: 0;
+  button {
+    cursor: pointer;
+    align-self: center;
+    font-size: 22px;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .pagination {
+    list-style-type: none;
+    padding: 0;
+    li {
+      display: inline;
+      padding: 0 5px;
+      cursor: pointer;
+      font-size: 1.6rem;
+    }
+  }
+
+  .board-heading,
+  .cv {
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cv {
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 6px;
+    .cvAction {
+      button {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+// dynamic wrapper panel
+.panel {
+  margin: 10px 0;
+  border: 2px solid #f8fafe;
+  border-radius: 5px;
+  padding: 20px;
+  flex-direction: column;
+  display: flex;
+  transition: all ease-in-out;
+  .panelHeading {
+    display: flex;
+    transition: all ease-in-out;
+    width: 100%;
+    .panelTitle {
+      font-weight: 600;
+      font-size: 17px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .panelSubtitle {
+      width: 50%;
+      font-size: 15px;
+      margin-left: 20px;
+      color: #98a1b3;
+    }
+    .panelToggler {
+      margin-left: auto;
+      align-self: center;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+    }
+    .panelToggler-opened {
+      transform: rotate(180deg);
+    }
+  }
+  .panelBody {
+    transition: all 1s;
+  }
+}
+
+.fileContainer {
+  background: #fff;
+  box-shadow: 2px 2px 3px 0 rgb(0 0 0 / 5%);
+  position: relative;
+  border-radius: 10px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px auto;
+  transition: all 0.3s ease-in;
+  .uploadIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .chooseFileButton {
+    padding: 6px 23px;
+    background: #3f4257;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 10px 0;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+}
+.btn-default {
+  font-family: "Poppins";
+  background-color: #694aff;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.previewButton {
+  display: none;
+  background-color: #060910;
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  text-align: center;
+  img {
+    width: 50%;
+    padding-top: 15px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .wrapper .grid2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+// from index.scss
+@media only screen and (max-width: 1050px) {
+  body,
+  html {
+    width: 100%;
+    min-height: 100%;
+    overflow: unset;
+  }
+  #root {
+    //  height: unset;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100% !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+  .ad {
+    display: none;
+  }
+
+  .ad-mobile {
+    display: unset !important;
+  }
+
+  .adminTabs {
+    .adminTab {
+      min-width: 100px !important;
+      width: 120px !important;
+      .adminTabLeft {
+        .number {
+          font-size: 12px;
+        }
+        .tabTitle {
+          font-size: 12px;
+        }
+      }
+      .adminTabRight {
+        .adminTabCircle {
+          width: 50px !important;
+          height: 50px !important;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-height: 100% !important;
+    .grid-2-col {
+      grid-template-columns: 1fr;
+    }
+
+    .previewButton {
+      display: unset;
+    }
+    .wrapper {
+      .actions {
+        max-width: 100%;
+        min-height: auto;
+        .action-introWrapper {
+          padding: 20px;
+          max-width: 100%;
+        }
+      }
+    }
+    .boardShowed {
+      transform: translateX(0px) !important;
+    }
+
+    .action-introWrapper {
+      height: 100%;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      .head {
+        margin: 1rem 0rem;
+      }
+      h1 {
+        font-size: 1.9rem !important;
+      }
+      ul {
+        padding: 0;
+        li {
+          font-size: 1rem;
+          .numberWrapper {
+            min-width: 40px;
+            min-height: 40px;
+          }
+        }
+      }
+      .head {
+        margin: 0;
+      }
+      .body {
+        display: flex;
+
+        justify-content: center;
+      }
+    }
+    .right-panel {
+      transform: translateX(1050px);
+      transition: all 0.3s ease-in-out;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .board {
+        padding-top: 0px !important;
+        //  justify-content: center;
+        margin-bottom: 70px;
+        width: 100%;
+
+        .ad-mobile {
+          display: block !important;
+        }
+        .board-heading {
+          .title {
+            font-size: 24px !important;
+          }
+        }
+
+        .templateSelection {
+          width: 90%;
+          .templatesList {
+            .template {
+              width: 200px !important;
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Dashboard
+  .dashboardWrapper {
+    .navbar {
+      .dashboardNavigaitionList {
+        display: none;
+      }
+      .dashboarProfile {
+        .dashboardDropdown {
+          .mobileItems {
+            display: block !important;
+          }
+        }
+      }
+    }
+    .dashboardContent {
+      width: 80% !important;
+
+      .resumeItemContentWrapper {
+        .name {
+          font-size: 14px;
+        }
+        .occupation {
+          font-size: 13px;
+        }
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+// Small screen mobiles
+@media only screen and (max-width: 360px) {
+  #root {
+    overflow: hidden;
+  }
+  .wrapper {
+    .actions {
+      .filling {
+        padding: 20px;
+        .inputTitle {
+          font-size: 13px;
+        }
+        .panel {
+          .panel-title {
+            font-size: 14px;
+          }
+          .panel-subtitle {
+            font-size: 14px;
+          }
+        }
+      }
+      .action-introWrapper {
+        .body {
+          width: 90%;
+          height: 70%;
+          h1 {
+            text-align: center;
+            font-size: 18px !important;
+          }
+        }
+        .footer {
+          display: none;
+          text-align: center;
+          ul {
+            li {
+              font-size: 14px !important;
+            }
+          }
+        }
+      }
+    }
+
+    .board {
+      .ad-mobile {
+        display: block !important;
+      }
+      .cv {
+        transform: scale(1);
+      }
+    }
+  }
+  .board {
+    width: 100% !important;
+    .introWrapper img {
+      width: 100px !important;
+    }
+    .btn-default {
+      font-size: 13px;
+    }
+    .templateSelection {
+      .templatesList {
+        grid-template-columns: 1fr;
+        .template {
+          margin: 10px auto;
+          width: 400px !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #root {
+    overflow: hidden;
+  }
+  .panel {
+    .grid-2-col {
+      grid-template-columns: 1fr;
+    }
+  }
+  .board {
+    width: 100%;
+    .templateSelection {
+      .templatesList {
+        grid-template-columns: 1fr;
+        .template {
+          margin: 10px auto;
+          width: 400px !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-device-width: 500px) {
+  .cv {
+    scale: 0.8 !important;
+    transform: none !important;
+  }
+}
+@media only screen and (max-device-width: 400px) {
+  .cv {
+    scale: 0.68 !important;
+    transform: none !important;
+  }
+}
