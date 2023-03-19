@@ -924,9 +924,6 @@ function KonvaCanvas(props) {
       </div>
       <div className="cvAction">
         <div>
-          <button className="btn-default" style={{ fontSize: "15px" }}>
-            Save as draft
-          </button>
           <button
             onClick={downloadPDF}
             className="btn-default"
